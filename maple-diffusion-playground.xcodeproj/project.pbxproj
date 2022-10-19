@@ -16,7 +16,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		97B171AB28F23B7700B97242 /* maple-diffusion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "maple-diffusion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ED0B39C2900642C005993AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1ED0B39E29006486005993AC /* MLCompute.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MLCompute.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.0.sdk/System/Library/Frameworks/MLCompute.framework; sourceTree = DEVELOPER_DIR; };
+		1ED0B3A3290064BC005993AC /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.0.sdk/System/Library/Frameworks/CoreML.framework; sourceTree = DEVELOPER_DIR; };
+		97B171AB28F23B7700B97242 /* maple-diffusion-playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "maple-diffusion-playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B171AE28F23B7700B97242 /* maple_diffusionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maple_diffusionApp.swift; sourceTree = "<group>"; };
 		97B171B028F23B7700B97242 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		97B171B228F23B7800B97242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,18 +40,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ED0B39D29006486005993AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ED0B3A3290064BC005993AC /* CoreML.framework */,
+				1ED0B39E29006486005993AC /* MLCompute.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		97B171A228F23B7700B97242 = {
 			isa = PBXGroup;
 			children = (
 				97B171AD28F23B7700B97242 /* maple-diffusion */,
 				97B171AC28F23B7700B97242 /* Products */,
+				1ED0B39D29006486005993AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		97B171AC28F23B7700B97242 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				97B171AB28F23B7700B97242 /* maple-diffusion.app */,
+				97B171AB28F23B7700B97242 /* maple-diffusion-playground.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +69,7 @@
 		97B171AD28F23B7700B97242 /* maple-diffusion */ = {
 			isa = PBXGroup;
 			children = (
+				1ED0B39C2900642C005993AC /* Info.plist */,
 				97B171AE28F23B7700B97242 /* maple_diffusionApp.swift */,
 				97B171B028F23B7700B97242 /* ContentView.swift */,
 				97B171BD28F23BBC00B97242 /* MapleDiffusion.swift */,
@@ -78,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		97B171AA28F23B7700B97242 /* maple-diffusion */ = {
+		97B171AA28F23B7700B97242 /* maple-diffusion-playground */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97B171BA28F23B7800B97242 /* Build configuration list for PBXNativeTarget "maple-diffusion" */;
+			buildConfigurationList = 97B171BA28F23B7800B97242 /* Build configuration list for PBXNativeTarget "maple-diffusion-playground" */;
 			buildPhases = (
 				97B171A728F23B7700B97242 /* Sources */,
 				97B171A828F23B7700B97242 /* Frameworks */,
@@ -90,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = "maple-diffusion";
+			name = "maple-diffusion-playground";
 			productName = "maple-diffusion";
-			productReference = 97B171AB28F23B7700B97242 /* maple-diffusion.app */;
+			productReference = 97B171AB28F23B7700B97242 /* maple-diffusion-playground.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 97B171A628F23B7700B97242 /* Build configuration list for PBXProject "maple-diffusion" */;
+			buildConfigurationList = 97B171A628F23B7700B97242 /* Build configuration list for PBXProject "maple-diffusion-playground" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				97B171AA28F23B7700B97242 /* maple-diffusion */,
+				97B171AA28F23B7700B97242 /* maple-diffusion-playground */,
 			);
 		};
 /* End PBXProject section */
@@ -188,6 +202,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -205,6 +220,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -246,6 +263,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -257,6 +275,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -270,14 +290,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "maple-diffusion/maple_diffusion.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"maple-diffusion/Preview Content\"";
-				DEVELOPMENT_TEAM = MGZW3M7DL4;
+				DEVELOPMENT_TEAM = L5TU44ZMV8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "maple-diffusion/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Maple Diffusion";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -293,13 +316,16 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.madebyollin.maple-diffusion";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happilywobbly.maple-diffusion-playground";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,6";
 			};
 			name = Debug;
 		};
@@ -309,14 +335,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "maple-diffusion/maple_diffusion.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"maple-diffusion/Preview Content\"";
-				DEVELOPMENT_TEAM = MGZW3M7DL4;
+				DEVELOPMENT_TEAM = L5TU44ZMV8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "maple-diffusion/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Maple Diffusion";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -332,20 +361,23 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.madebyollin.maple-diffusion";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happilywobbly.maple-diffusion-playground";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,6";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		97B171A628F23B7700B97242 /* Build configuration list for PBXProject "maple-diffusion" */ = {
+		97B171A628F23B7700B97242 /* Build configuration list for PBXProject "maple-diffusion-playground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97B171B828F23B7800B97242 /* Debug */,
@@ -354,7 +386,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97B171BA28F23B7800B97242 /* Build configuration list for PBXNativeTarget "maple-diffusion" */ = {
+		97B171BA28F23B7800B97242 /* Build configuration list for PBXNativeTarget "maple-diffusion-playground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97B171BB28F23B7800B97242 /* Debug */,
